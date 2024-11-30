@@ -1,0 +1,173 @@
+/* Global styles */
+body {
+    background-color: black;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+/* Centering the content */
+.square {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.square span:nth-child(1),
+.square span:nth-child(2),
+.square span:nth-child(3) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(#6b72ff00 50%, #000dff3b 40%);
+    box-shadow: 0 0 50px rgb(25, 0, 255), inset 0 0 50px rgb(25, 0, 255);
+    border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+    transition: 0.56s;
+}
+
+/* Apply animations to circles */
+.square span:nth-child(1) {
+    animation: animate1 4s linear infinite;
+}
+
+.square span:nth-child(2) {
+    animation: animate2 6s linear infinite;
+}
+
+.square span:nth-child(3) {
+    animation: animate3 8s linear infinite;
+}
+
+/* Keyframes */
+@keyframes animate1 {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes animate2 {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes animate3 {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Input field */
+#TextInput {
+    background-color: #181818a8;
+    border: none;
+    box-shadow: 0 0 10px blue, inset 0 0 10px blue;
+    border-radius: 8px;
+    color: white;
+    padding: 10px;
+    width: 60%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-field {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    outline: none;
+    color: white;
+    font-family: cursive;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.glow-on-hover {
+    width: 35px;
+    height: 35px;
+    border: none;
+    outline: none;
+    color: white;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.glow-on-hover i {
+    color: white;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, blue, #48ff00, #fffb00, #002bff);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 50%;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.siri-message {
+    letter-spacing: normal;
+    word-spacing: normal;
+    margin: 0;
+    padding: 0;
+}
+
+
+ /* Input Filed End*/
+  /* Chat Box Start */
+  .chat-canvas{
+    background-color: #191919
+  }
+  .receiver_message{
+    padding: 8px;
+    border: 2px solid cyan;
+    border-radius: 0px 15px 15px 20px;
+    width: auto;
+    color: white;
+    background-color: #0dcaf014;
+  }
+  .sender_message{
+    padding: 8px;
+    border: 1px solid #0045ff;
+    border-radius: 15px 15px 0px 20px;
+    width: auto;
+    color: white;
+    background-color: #0045ff;
+  }
+  .width-size{
+    max-width: 80%;
+    width: auto;
+  }
+  /* Chat Box Start End*/
